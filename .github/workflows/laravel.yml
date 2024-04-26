@@ -17,11 +17,11 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.1'
         architecture: x64
       
     - name: Install Composer dependencies
-      run: composer install --no-interaction --no-progress
+      run: composer install --no-interaction --no-progress --ignore-platform-reqs
       
     - name: Create environment file
       run: copy .env.example .env
